@@ -1,2 +1,4 @@
 requests
 pyfiglet
+python-telegram-bot
+pyrogram
