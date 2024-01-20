@@ -1,0 +1,39 @@
+{
+  "name": "test",
+  "description": "Telegram Converter bot. Create your Fork now.",
+  "keywords": [
+    "telegram",
+    "best",
+    "Convert",
+    "Bot"
+  ],
+  "logo": "https://telegra.ph/file/7f3b556164324610e21a6.jpg",
+  "success_url": "https://telegram.dog/convert_Ns_bot",
+  "website": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
+  "repository": "https://github.com/Ns-AnoNymouS/TG-CONVERT-BOT",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+}
