@@ -15,25 +15,28 @@
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
-    },
+    }
+  },
   "addons": [
     {
-    "plan": "heroku-postgresql",
+      "plan": "heroku-postgresql",
       "options": {
         "version": "12"
       }
     }
   ],
-  "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
-    "url": "heroku/python"
-  }],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
   "formation": {
     "worker": {
       "quantity": 1,
       "size": "free"
     }
   }
-}
 }
