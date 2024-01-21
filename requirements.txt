@@ -1,5 +1,4 @@
 beautifulsoup4==4.10.0
-python ==3.10
 pyfiglet==1.0.2
 requests==2.31.0
 telegram==0.0.1
