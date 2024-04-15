@@ -1,1 +1,1 @@
-worker: python3 bot.py
+worker: python3 vbv_checker_raven.py
